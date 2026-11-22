@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blendons</title>
+    <meta name="description" content="Blendons — Imagine. Create. Build.">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <img
+        id="blendonsLogo"
+        src="c:\Users\USER\Downloads\LOGO.png"
+        alt="Blendons Logo"
+    >
+
+    <h1 class="welcome">WELCOME TO BLENDONS</h1>
+
+    <video id="blendonsAnimation" autoplay muted loop playsinline>
+        <source src="c:\Frames\11\VIDEO.mp4" type="video/mp4">
+    </video>
+
+
+    <!-- =========================
+         ACCOUNT BUTTONS
+    ========================== -->
+
+    <div class="account-buttons">
+        <a href="#login" class="login-button">Log In</a>
+        <button class="signup-button" id="openSignup">Sign Up</button>
+    </div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#vision">Vision</a>
+        <a href="#values">Core Values</a>
+        <a href="#services">Services</a>
+        <a href="#quality">Quality</a>
+    </nav>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about" class="about">
+        <h2>About Blendons</h2>
+
+        <p>
+            Welcome to Blendons — a creative space where imagination becomes reality.
+            We create animations and build websites that bring ideas to life.
+            Whether you want to tell a story through animation or create a powerful
+            website, Blendons is here to help you turn your ideas into something real.
+        </p>
+
+        <h3>Imagine. Create. Build.</h3>
+    </section>
+
+
+    <!-- =========================
+         MISSION
+    ========================== -->
+
+    <section id="mission">
+        <h2>Our Mission</h2>
+
+        <p>
+            To inspire creativity and make it easier for people to bring their ideas
+            to life through animation and website creation.
+        </p>
+    </section>
+
+
+    <!-- =========================
+         VISION
+    ========================== -->
+
+    <section id="vision">
+        <h2>Our Vision</h2>
+
+        <p>
+            To build a creative digital world where everyone can imagine, create,
+            and build without limits.
+        </p>
+    </section>
+
+
+    <!-- =========================
+         CORE VALUES
+    ========================== -->
+
+    <section id="values">
+        <h2>Core Values</h2>
+
+        <p>
+            Creativity • Innovation • Quality • Learning • Imagination
+        </p>
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <p>
+            Animation Creation • Website Development • Creative Design
+        </p>
+    </section>
+
+
+    <!-- =========================
+         QUALITY
+    ========================== -->
+
+    <section id="quality">
+        <h2>Quality</h2>
+
+        <p>
+            We aim to create work that is creative, useful, visually appealing,
+            and enjoyable to experience.
+        </p>
+    </section>
+
+
+    <!-- =========================
+         START SECTION
+    ========================== -->
+
+    <div class="start-section">
+
+        <h2>Which one do you want to start with?</h2>
+
+        <div class="start-buttons">
+            <a href="#animation" class="start-button">Animation</a>
+            <a href="#website" class="start-button">Website</a>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SIGN UP
+    ========================== -->
+
+    <div class="signup-box" id="signupBox">
+
+        <div class="signup-form">
+
+            <button class="close-signup" id="closeSignup">×</button>
+
+            <h2>Create Your Blendons Account</h2>
+
+            <input
+                type="text"
+                placeholder="Username"
+                id="username"
+            >
+
+            <input
+                type="email"
+                placeholder="Email"
+                id="email"
+            >
+
+            <input
+                type="password"
+                placeholder="Password"
+                id="password"
+            >
+
+            <button class="create-account" id="createAccount">
+                Create Account
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         BLENDONS AI
+    ========================== -->
+
+    <button
+        id="blendonsAIButton"
+        class="blendons-ai-button"
+        type="button"
+    >
+        🤖
+    </button>
+
+
+    <div id="blendonsAIChat" class="blendons-ai-chat">
+
+        <div class="ai-header">
+            <span>🤖 Blendons AI</span>
+
+            <button
+                id="closeAI"
+                type="button"
+            >
+                ×
+            </button>
+        </div>
+
+
+        <div class="ai-messages" id="aiMessages">
+
+            <div class="ai-message">
+                Hello! I'm Blendons AI. 👋
+                <br><br>
+                How can I help you today?
+            </div>
+
+        </div>
+
+
+        <div class="ai-input">
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Ask Blendons AI..."
+                autocomplete="off"
+            >
+
+            <button
+                id="sendAI"
+                type="button"
+            >
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <p>Ready to create with Blendons?</p>
+
+        <a href="tel:08060895441">
+            📞 Call us: 08060895441
+        </a>
+
+        <p class="copyright">
+            © 2026 Blendons. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* =========================
+               LOGO FULLSCREEN
+            ========================== */
+
+            const logo = document.getElementById("blendonsLogo");
+
+            if (logo) {
+                logo.addEventListener("click", function () {
+
+                    if (logo.requestFullscreen) {
+                        logo.requestFullscreen();
+                    }
+
+                });
+            }
+
+
+            /* =========================
+               VIDEO FULLSCREEN
+            ========================== */
+
+            const animation =
+                document.getElementById("blendonsAnimation");
+
+            if (animation) {
+
+                animation.addEventListener("click", function () {
+
+                    if (animation.requestFullscreen) {
+                        animation.requestFullscreen();
+                    }
+
+                });
+
+            }
+
+
+            /* =========================
+               NAVIGATION
+            ========================== */
+
+            const navLinks =
+                document.querySelectorAll(".navbar a");
+
+            const sections =
+                document.querySelectorAll("section");
+
+            window.addEventListener("scroll", function () {
+
+                let current = "";
+
+                sections.forEach(function (section) {
+
+                    const sectionTop =
+                        section.offsetTop - 150;
+
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+
+                });
+
+                navLinks.forEach(function (link) {
+
+                    link.classList.remove("active");
+
+                    if (
+                        link.getAttribute("href") ===
+                        "#" + current
+                    ) {
+                        link.classList.add("active");
+                    }
+
+                });
+
+            });
+
+
+            /* =========================
+               SIGN UP
+            ========================== */
+
+            const openSignup =
+                document.getElementById("openSignup");
+
+            const closeSignup =
+                document.getElementById("closeSignup");
+
+            const signupBox =
+                document.getElementById("signupBox");
+
+            const createAccount =
+                document.getElementById("createAccount");
+
+
+            openSignup.addEventListener("click", function () {
+                signupBox.style.display = "flex";
+            });
+
+
+            closeSignup.addEventListener("click", function () {
+                signupBox.style.display = "none";
+            });
+
+
+            createAccount.addEventListener("click", async function () {
+
+                const username =
+                    document.getElementById("username").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const password =
+                    document.getElementById("password").value;
+
+
+                if (!username || !email || !password) {
+
+                    alert("Please fill in all fields.");
+
+                    return;
+                }
+
+
+                try {
+
+                    const response = await fetch("/signup", {
+
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            username: username,
+                            email: email,
+                            password: password
+                        })
+
+                    });
+
+
+                    const result = await response.json();
+
+
+                    if (result.success) {
+
+                        alert("🎉 Account created successfully!");
+
+                        document.getElementById("username").value = "";
+                        document.getElementById("email").value = "";
+                        document.getElementById("password").value = "";
+
+                        signupBox.style.display = "none";
+
+                    } else {
+
+                        alert(
+                            result.message ||
+                            "Could not create account."
+                        );
+
+                    }
+
+                } catch (error) {
+
+                    console.error(error);
+
+                    alert(
+                        "❌ Could not connect to the Blendons server."
+                    );
+
+                }
+
+            });
+
+
+            /* =========================
+               BLENDONS AI
+            ========================== */
+
+            const aiButton =
+                document.getElementById("blendonsAIButton");
+
+            const aiChat =
+                document.getElementById("blendonsAIChat");
+
+            const closeAI =
+                document.getElementById("closeAI");
+
+            const aiInput =
+                document.getElementById("aiInput");
+
+            const sendAI =
+                document.getElementById("sendAI");
+
+            const aiMessages =
+                document.getElementById("aiMessages");
+
+
+            /* OPEN AI */
+
+            aiButton.addEventListener("click", function () {
+
+                aiChat.style.display = "flex";
+
+                aiInput.focus();
+
+            });
+
+
+            /* CLOSE AI */
+
+            closeAI.addEventListener("click", function () {
+
+                aiChat.style.display = "none";
+
+            });
+
+
+            /* SEND MESSAGE */
+
+            async function sendMessage() {
+
+                const message =
+                    aiInput.value.trim();
+
+
+                if (!message) {
+                    return;
+                }
+
+
+                /* USER MESSAGE */
+
+                const userMessage =
+                    document.createElement("div");
+
+                userMessage.className =
+                    "ai-message";
+
+                userMessage.textContent =
+                    "You: " + message;
+
+                aiMessages.appendChild(userMessage);
+
+
+                /* CLEAR INPUT */
+
+                aiInput.value = "";
+
+
+                /* THINKING */
+
+                const aiMessage =
+                    document.createElement("div");
+
+                aiMessage.className =
+                    "ai-message";
+
+                aiMessage.textContent =
+                    "Blendons AI is thinking...";
+
+                aiMessages.appendChild(aiMessage);
+
+
+                aiMessages.scrollTop =
+                    aiMessages.scrollHeight;
+
+
+                try {
+
+                    const response =
+                        await fetch("/api/chat", {
+
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                message: message
+                            })
+
+                        });
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            data.error ||
+                            "Server error"
+                        );
+
+                    }
+
+
+                    aiMessage.textContent =
+                        "Blendons AI: " +
+                        data.reply;
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Blendons AI ERROR:",
+                        error
+                    );
+
+                    aiMessage.textContent =
+                        "Blendons AI: I couldn't connect to the server.";
+
+                }
+
+
+                aiMessages.scrollTop =
+                    aiMessages.scrollHeight;
+
+            }
+
+
+            /* SEND BUTTON */
+
+            sendAI.addEventListener(
+                "click",
+                sendMessage
+            );
+
+
+            /* ENTER KEY */
+
+            aiInput.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Enter") {
+                        sendMessage();
+                    }
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
