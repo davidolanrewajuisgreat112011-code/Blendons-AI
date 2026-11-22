@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
 require("dotenv").config();
 
@@ -14,7 +15,7 @@ console.log(
 const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY
 });
-
+app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
 
